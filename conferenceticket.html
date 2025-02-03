@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+    <title>frontend mentor / conference ticket up1</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" size="32*32" href="assets/images/favicon-32x32.png">
+
+<body>
+    <div class="container">
+        <div class="bold">
+            <img class="border" src="/assets/images/logo-mark.svg" alt="" width="20px" height="20px"
+                style="background-color: red;">
+            <header>Coding conference</header>
+
+            <h1>Your Journey to Coding Conf<br> 2025 starts here!</h1>
+            <p>Secure your spot at next year's biggest coding conference.</p>
+        </div>
+
+        <form id="survey-form">
+
+            <div class="iron">
+                <label id="upload-label" for="upload-avatar">upload-avatar</label>
+                <input type="file" id="upload" required placeholder="drag and drop or click to upload" />
+                <img src="/assets/images/icon-upload.svg" alt="" class="run">
+                <p>upload your photo (jpg or png,max size: 500kb)</p>
+            </div>
+            <label id="name-label" for="name"> Full Name:</label>
+            <input type="text" id="name" required placeholder="Enter your name" />
+            <label id="email-address" for="email">email Address:</label>
+            <input type="text" id="email" required placeholder="@emaple@gmail.com" />
+            <label id="github-label" for="username">github username:</label>
+            <input type="username" id="username" required placeholder="@kristi" />
+            <label>
+                <button type="submit" id="generatemyticket">generate my ticket</button>
+            </label>
+        </form>
+    </div>
+
+
+    <script>
+        // function to generate a conference ticket
+        function generateTicket(fullname, email, username, date, location) {
+            document.getElementById('full name').innerText = 'Full Name:' + name;
+            document.getElementById('email adress').innerText = 'Email Address:' + email;
+            document.getElementById('github username').innerText = 'Github Username:' + username;
+            document.getElementById('date').innerText = 'date:' + date;
+            document.getElementById('location').innerText = 'location:' + location;
+        }
+        
+        //Example usage
+        generateTicket('john doe', 'johnmatth98@email.com', 'johndan', '28th of january,2025', 'Austin,TX')
+
+    </script>
+
+</body>
+</head>
+
+
+
+
+</html>

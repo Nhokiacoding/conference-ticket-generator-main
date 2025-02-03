@@ -1,0 +1,73 @@
+* {
+    background-image: url(assets/images/background-desktop.png);
+    color: white;
+    /* box-sizing: border-box;*/
+
+}
+
+body {
+    width: 100%;
+    height: 200px;
+    justify-content: center;
+    text-align: center;
+    font-family: Tahoma;
+    font-size: 16px;
+}
+
+.container {
+    cursor: pointer;
+    display: block;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="username"] {
+    width: 20%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.bold {
+    text-align: center;
+    display: inline;
+}
+
+.border,
+header {
+    display: inline;
+}
+
+.iron {
+    text-align: center;
+}
+
+#upload {
+    position: relative;
+    padding: 40px;
+}
+
+.run {
+    position: absolute;
+    left: 670px;
+}
+
+button {
+    background-color: peru;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    border-radius: 4px;
+    bottom: 200px;
+}
+
+button:hover {
+    background-color: peru;
+}
