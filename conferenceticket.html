@@ -34,31 +34,63 @@
             <label id="github-label" for="username">github username:</label>
             <input type="username" id="username" required placeholder="@kristi" />
             <label>
-                <button type="submit" id="generatemyticket">generate my ticket</button>
+                <button type="submit" id="generatemyticket" onclick="validateEmail()">generate my ticket</button>
             </label>
         </form>
+
+
+
+
+        <div>
+            <div id="display-data" class="display-data" style="display: none;">
+                <img class="logo" src="/assets/images/logo-mark.svg" alt="" width="20px" height="20px"
+                    style="background-color: red;">
+                
+            </div>
+            <div class="headings">
+                <h1>Congrats, <span id="header-name" class="gradient-text"></span>!Your ticket is ready.</h1>
+
+                <p>we've emailed your ticket to <span id="display-email" class="header-email"></span>and will send
+                    updates in the run up to the event.</p>
+                </p>
+            </div>
+            <div class="ticket-container">
+                <!-- <img src="/assets/images/pattern-ticket.svg" class="ticket-img"> -->
+            
+                <div class="logo">
+                    <img src="/assets/images/logo-mark.svg"  alt="" width="20px" height="20px"
+                        style="background-color: red;">
+                    Coding Conf
+                </div>
+                <p class="date">feb 4,2025 / Austin, TX</p>
+          
+           
+            <div class="ticket-user">
+                <img id="display-image" src="" alt="">
+                <div class="user-info">
+                    <span id="display-name"></span>
+                    <div class="github-username">
+                        <img src="/assets/images/icon-github.svg" alt="">
+                        <span id="display-github"></span>
+                    </div>
+                </div>
+
+
+            </div>
+            <p class="ticket-number">#01674</p>
+        </div>
+        </div>
     </div>
 
-
-    <script>
-        // function to generate a conference ticket
-        function generateTicket(fullname, email, username, date, location) {
-            document.getElementById('full name').innerText = 'Full Name:' + name;
-            document.getElementById('email adress').innerText = 'Email Address:' + email;
-            document.getElementById('github username').innerText = 'Github Username:' + username;
-            document.getElementById('date').innerText = 'date:' + date;
-            document.getElementById('location').innerText = 'location:' + location;
-        }
-        
-        //Example usage
-        generateTicket('john doe', 'johnmatth98@email.com', 'johndan', '28th of january,2025', 'Austin,TX')
+    <script src="main.js">
 
     </script>
 
 </body>
+
+
+
+
 </head>
-
-
-
 
 </html>
