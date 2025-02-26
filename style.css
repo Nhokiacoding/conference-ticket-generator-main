@@ -377,3 +377,238 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* mobile responsiveness */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inconsolata', sans-serif;
+  background-color: #0c082b;
+  color: rgba(229, 229, 230, 0.68);
+  background-size: cover;
+  max-height: 100vh;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Image Container */
+.image-container {
+  background: url(/assets/images/background-desktop.png) no-repeat center center/cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  place-content: center;
+  opacity: 0.95;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* SVG Animations */
+.svg-img {
+  position: absolute;
+  opacity: 0.85;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.svg-img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Form */
+.form-content {
+  width: 90%;
+  max-width: 80rem;
+  padding: 6rem;
+  margin: auto;
+  position: relative;
+  z-index: 20;
+  background: rgba(12, 8, 43, 0.8);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease-in-out;
+}
+
+.form-header {
+  font-size: 3.6rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.form-header:hover {
+  color: #f57261;
+}
+
+/* Input Fields */
+.input-box input {
+  background-color: rgba(12, 8, 43, 0.9);
+  backdrop-filter: blur(2px) saturate(100%);
+  color: #fff;
+  width: 100%;
+  padding: 1.2rem 0.6rem;
+  border: 1px solid rgba(210, 209, 214, 0.6);
+  border-radius: 0.6rem;
+  transition: all 0.3s ease;
+}
+
+.input-box input:focus {
+  border-color: #f66e5c;
+  outline: none;
+  box-shadow: 0 0 10px rgba(246, 110, 92, 0.5);
+}
+
+/* Upload Box */
+.drop-box {
+  cursor: pointer;
+  background-color: rgba(12, 8, 43, 0.8);
+  backdrop-filter: blur(5px);
+  color: #d2d1d6;
+  padding: 1.2rem;
+  outline: 2px dashed rgba(135, 132, 164, 0.5);
+  border-radius: 0.6rem;
+  transition: background 0.3s ease, outline 0.3s ease;
+}
+
+.drop-box:hover {
+  background-color: rgba(12, 8, 43, 1);
+  outline: 2px dashed #f66e5c;
+}
+
+/* Button Effects */
+.ticket-link {
+  cursor: pointer;
+  background-color: #f66e5c;
+  color: #0c082b;
+  padding: 1.2rem;
+  font-size: 1.6rem;
+  width: 100%;
+  border-radius: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.ticket-link:hover {
+  background-color: #f57261;
+  transform: scale(1.05);
+}
+
+/* Ticket Section */
+.ticket-container {
+  background: rgba(12, 8, 43, 0.85);
+  background-image: url(assets/images/pattern-ticket.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  aspect-ratio: 16 / 9;
+  max-width: 500px;
+  margin: auto;
+  border-radius: 0.6rem;
+  transition: all 0.3s ease;
+}
+
+.ticket-container:hover {
+  transform: translateY(-5px);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 55%;
+  }
+
+  .form-content {
+    padding: 4rem;
+  }
+
+  .display-txt {
+    padding: 0 4rem;
+  }
+
+  .svg-img {
+    opacity: 0.75;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+
+  .image-container {
+    background: url(/assets/images/background-mobile.png) no-repeat center center/cover;
+    height: 100vh;
+    opacity: 0.9;
+  }
+
+  .form-content {
+    width: 95%;
+    padding: 3.5rem;
+  }
+
+  .ticket-container {
+    max-width: 90%;
+    aspect-ratio: auto;
+  }
+
+  .svg-img {
+    display: none;
+  }
+
+  .ticket-number {
+    font-size: 1.5rem;
+    right: 20%;
+    top: 65%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 45%;
+  }
+
+  .form-header {
+    font-size: 2.8rem;
+  }
+
+  .form-content {
+    padding: 3rem;
+  }
+
+  .ticket-container {
+    max-width: 100%;
+  }
+
+  .ticket-number {
+    font-size: 1.3rem;
+    right: 15%;
+    top: 68%;
+  }
+
+  .form-logo {
+    font-size: 2rem;
+  }
+
+  .upload-hint {
+    font-size: 0.9rem;
+  }
+
+  .drop-box {
+    padding: 1rem;
+  }
+
+  .ticket-link {
+    font-size: 1.4rem;
+  }
+}
